@@ -1,0 +1,10 @@
+
+#!/bin/bash
+
+#SBATCH -A snic2020-15-186
+#SBATCH -p core
+#SBATCH -n 15
+#SBATCH -t 10:00:00
+#SBATCH -J LinusTrinity
+
+fq2fa --merge --filter /proj/snic2020-15-186/LinusBenchmark/data/HomoSap/Large1_ENCSR362HMX/sample1/homosapLarge1Left.fastq.gz /proj/snic2020-15-186/LinusBenchmark/data/HomoSap/Large1_ENCSR362HMX/sample1/homosapLarge2Right.fastq.gz read.fa idba_tran -r read.fa -o /proj/snic2020-15-186/LinusBenchmark/output/outputIDBAtest
